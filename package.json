@@ -13,6 +13,8 @@
     "express": "4.19.2",
     "body-parser": "1.20.2",
     "cors": "2.8.5",
-    "moment-timezone": "0.5.45"
+    "moment-timezone": "0.5.45",
+    "dotenv": "16.4.5",
+    "mysql2": "3.9.7"
   }
 }

@@ -3,7 +3,7 @@ import express from 'express';
 import cors from 'cors';
 
 import { ping } from './controller/system.js';
-import { getAllUsers } from './lib/userInfo.js';
+import { deleteUserById, getAllUsers, getUserById, postUser } from './lib/userInfo.js';
 
 const serverPort =  3000;
 const app = express();
@@ -14,6 +14,10 @@ const router = express.Router();
 
 router.route('/ping').get(ping);
 router.route('/all-users').get(getAllUsers);
+router.route('/user').get(getUserById);
+router.route('/user').post(postUser);
+router.route('/user').delete(deleteUserById);
+
 
 app.use('/socialLoginProject/api/v1',router);
 app.listen(serverPort);
